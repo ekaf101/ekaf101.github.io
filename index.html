@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="body w-100 display-block" id="bd">
+  <button type="button" onclick="hu()" id="btc" class="hide position-absolute m-3 l-5 btn btn-danger btn-rounded">MBYLL (X)</button>
+
+  <video id="v1" class="w-100 h-100 bg" autoplay muted>
+    <source src="vid.mp4" type="video/mp4">
+  </video>
+</div>
+
+
+<script>
+  setTimeout(bc, 5000);
+  setTimeout(qb, 2000);
+
+  //setTimeout(carousel, 4000);
+//  x.className = x.className.replace(" w3-show", "");
+  var myVideo = document.getElementById("v1");
+  var state = true;
+  var rate = 400;
+  var c=1;
+  //myVideo.play();
+    function bc() {
+   myVideo.classList.add("hide");
+      setTimeout(bd, rate);
+    }
+    function qb() {
+      document.getElementById("btc").classList.remove("hide")
+    }
+  function bd() {
+    if(state){
+      myVideo.classList.add("hide");
+      state = !state;
+      rate =rate - 5*c;
+    } else{
+      myVideo.classList.remove("hide")
+      state = !state;
+      rate =rate - 5*c;
+    }
+    setTimeout(bc, rate);
+    c++;
+  }
+  function hu() {
+    window.open("https://www.w3schools.com", "_blank", "toolbar=no,scrollbars=no,resizable=np,top=500,left=500,width=400,height=400");
+    hu();
+  }
+  // Find the right method, call on correct element
+</script>
+
+</body>
+</html>
